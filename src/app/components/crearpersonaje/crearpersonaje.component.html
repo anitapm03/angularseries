@@ -1,0 +1,25 @@
+<div>
+    <h1>Crear personaje:</h1>
+
+    <form #crear="ngForm">
+
+        <label>ID: </label>
+        <input type="number" name="cajaid" #cajaid class="form form-control" />
+        <br>
+        <label>Nombre: </label>
+        <input type="text" name="cajanombre" #cajanombre class="form form-control" />
+        <br>
+        <label>Imagen: </label>
+        <input type="text" name="cajaimagen" #cajaimagen class="form form-control" />
+        <br>
+        <label>Serie</label>
+        <select class="form-control"
+        name="selectserie" #selectserie>
+            <option *ngFor="let serie of series" value="{{serie.idSerie}}" >{{serie.nombre}}</option>
+        </select>
+        <br>
+        <button (click)="crearPersonaje()"
+         class="btn btn-success">Crear!</button>
+
+    </form>
+</div>

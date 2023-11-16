@@ -1,0 +1,22 @@
+<div>
+    <h1>Personajes de la serie:</h1>
+
+    <table class="table table-dark-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of personajes">
+                <td>{{p.nombre}}</td>
+                <td>
+                    <img src="{{p.imagen}}" style="width: 150px; height: 150px;" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-success" [routerLink]="['/']">Volver</a>
+</div>
